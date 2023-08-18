@@ -1,0 +1,15 @@
+
+( (S
+    (PP (IN In)
+      (NP (NN addition)))
+    (, ,)
+    (NP
+      (NP (DT the) (NN use))
+      (PP (IN of)
+        (NP (JJ IFN-U937) (NNS cells))))
+    (VP (VBD reduced)
+      (NP
+        (NP (JJ interassay) (NN variation))
+        (CC and)
+        (NP (NN simplified) (NN assay) (NN performance))))
+    (. .)))

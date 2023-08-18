@@ -1,0 +1,176 @@
+Question 1
+Convert the following grammar to Chomsky Normal Form (as described in the lecture video):
+
+R: 
+M -> N R
+M -> P P
+
+N -> P @N_P
+N -> P R
+@N_P -> N R
+
+R -> P P
+
+Question 2
+Given the following grammar and transition probabilities:
+
+S -> NP VP 		0.9
+S -> VP 		0.1
+VP -> V NP 		0.5
+VP -> V 		0.1
+VP -> V @VP_V 	0.3
+VP -> V PP 		0.1
+@VP_V -> NP NP 	1.0
+NP -> NP NP 	0.1
+NP -> NP PP 	0.2
+NP -> N 		0.7
+PP -> P NP 		1.0
+And given the following part of the CKY matrix:
+
+NP	0.3		NP		0.015
+V	0.2		@VP_V	0.09
+P	0.1		VP		0.05
+			PP		0.05
+			S		0.005
+=========================
+			PP		0.3
+			@VP_V   0.4
+			NP		0.5 
+			
+Question 3
+Given the following true and guessed parses, what is the LP/LR F1 (excluding any contribution from ROOT)?
+
+Guess:
+(ROOT
+  (S
+    (PP (IN In)
+      (NP (NN addition)))
+    (, ,)
+    (NP
+      (NP (DT the) (NN use))
+      (PP (IN of)
+        (NP (JJ IFN-U937) (NNS cells))))
+    (VP (VBD reduced)
+      (NP
+        (NP (JJ interassay) (NN variation))
+        (CC and)
+        (NP (NN simplified) (NN assay) (NN performance))))
+    (. .)))
+
+Gold:
+(ROOT
+  (S
+    (PP (IN In)
+      (NP (NN addition)))
+    (, ,)
+    (NP
+      (NP (DT the) (NN use))
+      (PP (IN of)
+        (NP (NN IFN-U937) (NNS cells))))
+    (VP
+      (VP (VBD reduced)
+        (NP (JJ interassay) (NN variation)))
+      (CC and)
+      (VP (VBD simplified)
+        (NP (NN assay) (NN performance))))
+    (. .)))
+
+LR=23/25, LP=23/28
+0.7826  Correcta
+0.8302
+0.8182
+0.75
+
+Question 4
+Lexicalize the following parse tree (annotate each non-terminal with the head of the phrase over which it is a constituent):
+
+(S
+  (NP (PRP I))
+  (VP (MD ca) (RB n't))
+  (VP
+    (VB help)
+    (NP (NNP you))
+    (PP
+      (IN with)
+      (NP (DT this) (NN one)))))
+(. .)
+
+(S-I
+  (NP-I (PRP I))
+  (VP-ca (MD ca) (RB n't))
+  (VP-help
+    (VB help)
+    (NP-you (NNP you))
+    (PP-with
+      (IN with)
+      (NP-one (DT this) (NN one)))))
+(. .)
+
+(S-help
+  (NP-I (PRP I))
+  (VP-ca (MD ca) (RB n't))
+  (VP-you
+    (VB help)
+    (NP-you (NNP you))
+    (PP-with
+      (IN with)
+      (NP-one (DT this) (NN one)))))
+(. .)
+
+(S-help
+  (NP-I (PRP I))
+  (VP-ca (MD ca) (RB n't))
+  (VP-help
+    (VB help)
+    (NP-you (NNP you))
+    (PP-one
+      (IN with)
+      (NP-one (DT this) (NN one)))))
+(. .)
+
+(S-help
+  (NP-I (PRP I))
+  (VP-ca (MD ca) (RB n't))
+  (VP-help
+    (VB help)
+    (NP-you (NNP you))
+    (PP-with
+      (IN with)
+      (NP-one (DT this) (NN one)))))			This is correct
+(. .)
+
+
+
+Question 5
+Given the following parse trees,
+
+( (S (NP (DT Every) (NN year))
+     (NP (PRP we))
+     (VP (VBP seek)
+	 (NP (NP (NNS companies) (, ,) (NNS organizations) (CC and) (NNS individuals))
+	     (SBAR (WHNP-1 (-NONE- 0))
+		   (S (NP (-NONE- *T*-1))
+		      (VP (TO to)
+			  (VP (VB sponsor)
+			      (NP (NP (QP (CD one) (CC or) (JJR more)))
+				  (PP (IN of)
+				      (NP (PRP$ our) (NNS families))))))))))
+     (. .)))
+
+( (S (NP (DT These) (NNS families))
+     (VP (VBP are)
+	 (NP (NP (NNS participants))
+	     (PP (IN in)
+		 (NP (PRP$ our)
+		     (ADJP (NN community) (HYPH -) (VBN based))
+		     (NNS programs)))))
+     (. .)))
+
+What is the MLE probability of the rule VP^S -> VBP NP if we were to perform parent annotation?
+
+P = (# of times VP^S splits to VBP NP) / (# of times VP^S occurs)
+
+(# of times VP^S splits to VBP NP) 	= 2
+(# of times VP^S occurs)			= 3
+
+P = 1/3

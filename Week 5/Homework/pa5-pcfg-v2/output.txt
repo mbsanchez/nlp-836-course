@@ -1,0 +1,525 @@
+[PCFGParser]	log prob = -19,93	sentence : Arthur is the king .
+[PCFGParser]	best parse tree: 
+(START
+   (ROOT
+      (S
+         (NP
+            (NNP Arthur))
+         (VP
+            (VPZ is)
+            (NP
+               (DT the)
+               (NN king))))
+      (ENDS .)))
+[PCFGParser]	log prob = -37,81	sentence : Arthur rides the horse near the castle .
+[PCFGParser]	best parse tree: 
+(START
+   (ROOT
+      (S
+         (NP
+            (NNP Arthur))
+         (VP
+            (VPZ rides)
+            (NP
+               (NP
+                  (DT the)
+                  (NN horse))
+               (PP
+                  (IN near)
+                  (NP
+                     (DT the)
+                     (NN castle))))))
+      (ENDS .)))
+[PCFGParser]	log prob = -33,01	sentence : riding to Camelot is hard .
+[PCFGParser]	best parse tree: 
+(START
+   (ROOT
+      (S
+         (S
+            (VP
+               (VBG riding)
+               (PP
+                  (TO to)
+                  (NP
+                     (NNP Camelot)))))
+         (VP
+            (VBZ is)
+            (ADJP
+               (JJ hard))))
+      (ENDS .)))
+[PCFGParser]	log prob = -23,59	sentence : do coconuts speak ?
+[PCFGParser]	best parse tree: 
+(START
+   (ROOT
+      (SQ
+         (@VBP-NP
+            (VBP do)
+            (NP
+               (NNS coconuts)))
+         (VP
+            (VB speak)))
+      (ENDS ?)))
+[PCFGParser]	log prob = -23,15	sentence : what does Arthur ride ?
+[PCFGParser]	best parse tree: 
+(START
+   (ROOT
+      (SBARQ
+         (WHNP
+            (WP what))
+         (SQ
+            (@VBZ-NP
+               (VBZ does)
+               (NP
+                  (NNP Arthur)))
+            (VP
+               (VB ride))))
+      (ENDS ?)))
+[PCFGParser]	log prob = -38,12	sentence : who does Arthur suggest she carry ?
+[PCFGParser]	best parse tree: 
+(START
+   (ROOT
+      (SBARQ
+         (WHNP
+            (WP who))
+         (SQ
+            (@VBZ-NP
+               (VBZ does)
+               (NP
+                  (NNP Arthur)))
+            (VP
+               (VB suggest)
+               (S
+                  (NP
+                     (PRP she))
+                  (VP
+                     (VB carry))))))
+      (ENDS ?)))
+[PCFGParser]	log prob = -32,77	sentence : why does England have a king ?
+[PCFGParser]	best parse tree: 
+(START
+   (ROOT
+      (SBARQ
+         (WHADVP
+            (WRB why))
+         (SQ
+            (@VBZ-NP
+               (VBZ does)
+               (NP
+                  (NNP England)))
+            (VP
+               (VB have)
+               (NP
+                  (DT a)
+                  (NN king)))))
+      (ENDS ?)))
+[PCFGParser]	log prob = -48,80	sentence : are they suggesting Arthur ride to Camelot ?
+[PCFGParser]	best parse tree: 
+(START
+   (ROOT
+      (SQ
+         (@VBP-NP
+            (VBP are)
+            (NP
+               (PRP they)))
+         (VP
+            (@VBG-NP
+               (VBG suggesting)
+               (NP
+                  (SBAR
+                     (S
+                        (NP
+                           (NNP Arthur))
+                        (VP
+                           (VB ride))))))
+            (PP
+               (TO to)
+               (NP
+                  (NNP Camelot)))))
+      (ENDS ?)))
+[PCFGParser]	log prob = -31,92	sentence : five strangers are at the Round Table .
+[PCFGParser]	best parse tree: 
+(START
+   (ROOT
+      (S
+         (NP
+            (CD five)
+            (NNS strangers))
+         (VP
+            (VBP are)
+            (PP
+               (IN at)
+               (NP
+                  (DT the)
+                  (NNP Round) Table)))))
+      (ENDS .)))
+[PCFGParser]	log prob = -26,76	sentence : Guinevere might have known .
+[PCFGParser]	best parse tree: 
+(START
+   (ROOT
+      (S
+         (NP
+            (NNP Guinevere))
+         (VP
+            (MD might)
+            (VP
+               (VB have)
+               (VP
+                  (VBN known)))))
+      (ENDS .)))
+[PCFGParser]	log prob = -34,72	sentence : Guinevere should be riding with Patsy .
+[PCFGParser]	best parse tree: 
+(START
+   (ROOT
+      (S
+         (NP
+            (NNP Guinevere))
+         (VP
+            (MD should)
+            (VP
+               (VB be)
+               (VP
+                  (VBG riding)
+                  (PP
+                     (IN with)
+                     (NP
+                        (NNP Patsy)))))))
+      (ENDS .)))
+[PCFGParser]	log prob = -42,50	sentence : it is Sir Lancelot who knows Zoot !
+[PCFGParser]	best parse tree: 
+(START
+   (ROOT
+      (S
+         (NP
+            (PRP it))
+         (VP
+            (VPZ is)
+            (NP
+               (NP
+                  (NNP Sir) Lancelot))
+               (SBAR
+                  (WHNP
+                     (WP who))
+                  (S
+                     (VP
+                        (VBZ knows)
+                        (NP
+                           (NNP Zoot))))))))
+      (ENDS !)))
+[PCFGParser]	log prob = -40,93	sentence : either Arthur knows or Patsy does .
+[PCFGParser]	best parse tree: 
+(START
+   (ROOT
+      (S
+         (NP
+            (DT either)
+            (NNP Arthur))
+         (VP
+            (VBZ knows)
+            (SBAR
+               (S
+                  (NP
+                     (CC or)
+                     (NNP Patsy))
+                  (VP
+                     (VBZ does))))))
+      (ENDS .)))
+[PCFGParser]	log prob = -43,03	sentence : neither Sir Lancelot nor Guinevere will speak of it .
+[PCFGParser]	best parse tree: 
+(START
+   (ROOT
+      (S
+         (NP
+            (@CC-NNP
+               (CC neither)
+               (NNP Sir) Lancelot))
+            (CCNPK
+               (CC nor)
+               (NNP Guinevere)))
+         (VP
+            (MD will)
+            (VP
+               (VB speak)
+               (PP
+                  (IN of)
+                  (NP
+                     (PRP it))))))
+      (ENDS .)))
+[PCFGParser]	log prob = -43,66	sentence : the Holy Grail was covered by a yellow fruit .
+[PCFGParser]	best parse tree: 
+(START
+   (ROOT
+      (S
+         (NP
+            (DT the)
+            (NNP Holy) Grail))
+         (VP
+            (VBD was)
+            (VP
+               (VBN covered)
+               (PP
+                  (IN by)
+                  (NP
+                     (@DT-JJ
+                        (DT a)
+                        (JJ yellow))
+                     (NN fruit))))))
+      (ENDS .)))
+[PCFGParser]	log prob = -46,66	sentence : Zoot might have been carried by a swallow .
+[PCFGParser]	best parse tree: 
+(START
+   (ROOT
+      (S
+         (NP
+            (NNP Zoot))
+         (VP
+            (MD might)
+            (VP
+               (VB have)
+               (VP
+                  (VBN been)
+                  (VP
+                     (VBN carried)
+                     (PP
+                        (IN by)
+                        (NP
+                           (DT a)
+                           (NN swallow))))))))
+      (ENDS .)))
+[PCFGParser]	log prob = -48,39	sentence : Arthur rode to Camelot and drank from his chalice .
+[PCFGParser]	best parse tree: 
+(START
+   (ROOT
+      (S
+         (NP
+            (NNP Arthur))
+         (VP
+            (@VP-CC
+               (VP
+                  (VBD rode)
+                  (PP
+                     (TO to)
+                     (NP
+                        (NNP Camelot))))
+               (CC and))
+            (VP
+               (VBD drank)
+               (PP
+                  (IN from)
+                  (NP
+                     (PRPS his)
+                     (NN chalice))))))
+      (ENDS .)))
+[PCFGParser]	log prob = -57,13	sentence : they migrate precisely because they know they will grow .
+[PCFGParser]	best parse tree: 
+(START
+   (ROOT
+      (S
+         (NP
+            (PRP they))
+         (VP
+            (@VB-ADVP
+               (VB migrate)
+               (ADVP
+                  (RB precisely)))
+            (SBAR
+               (IN because)
+               (S
+                  (NP
+                     (PRP they))
+                  (VP
+                     (VBP know)
+                     (SBAR
+                        (S
+                           (NP
+                              (PRP they))
+                           (VP
+                              (MD will)
+                              (VP
+                                 (VB grow))))))))))
+      (ENDS .)))
+[PCFGParser]	log prob = -22,90	sentence : do not speak !
+[PCFGParser]	best parse tree: 
+(START
+   (ROOT
+      (S
+         (VP
+            (@VB-RB
+               (VB do)
+               (RB not))
+            (VP
+               (VB speak))))
+      (ENDS !)))
+[PCFGParser]	log prob = -45,17	sentence : Arthur will have been riding for eight nights .
+[PCFGParser]	best parse tree: 
+(START
+   (ROOT
+      (S
+         (NP
+            (NNP Arthur))
+         (VP
+            (MD will)
+            (VP
+               (VB have)
+               (VP
+                  (VBN been)
+                  (VP
+                     (VBG riding)
+                     (PP
+                        (IN for)
+                        (NP
+                           (CD eight)
+                           (NNS nights))))))))
+      (ENDS .)))
+[PCFGParser]	log prob = -43,78	sentence : Arthur , sixty inches , is a tiny king .
+[PCFGParser]	best parse tree: 
+(START
+   (ROOT
+      (S
+         (NP
+            (NP
+               (NNP Arthur))
+            (PUNCT
+               (PUNCT
+                  (PCT ,)
+                  (NP
+                     (JJ sixty)
+                     (NNS inches)))
+               (PCT ,)))
+         (VP
+            (VPZ is)
+            (NP
+               (@DT-JJ
+                  (DT a)
+                  (JJ tiny))
+               (NN king))))
+      (ENDS .)))
+[PCFGParser]	log prob = -37,74	sentence : Arthur knows Patsy , the trusty servant .
+[PCFGParser]	best parse tree: 
+(START
+   (ROOT
+      (S
+         (NP
+            (NNP Arthur))
+         (VP
+            (VBZ knows)
+            (NP
+               (NP
+                  (NNP Patsy))
+               (PUNCT
+                  (PCT ,)
+                  (NP
+                     (@DT-JJ
+                        (DT the)
+                        (JJ trusty))
+                     (NN servant))))))
+      (ENDS .)))
+[PCFGParser]	log prob = -26,73	sentence : Arthur and Guinevere migrate frequently .
+[PCFGParser]	best parse tree: 
+(START
+   (ROOT
+      (S
+         (NP
+            (NNP Arthur)
+            (CCNPK
+               (CC and)
+               (NNP Guinevere)))
+         (VP
+            (VB migrate)
+            (ADVP
+               (RB frequently))))
+      (ENDS .)))
+[PCFGParser]	log prob = -51,83	sentence : he knows what they are covering with that story .
+[PCFGParser]	best parse tree: 
+(START
+   (ROOT
+      (S
+         (NP
+            (PRP he))
+         (VP
+            (VBZ knows)
+            (SBAR
+               (WHNP
+                  (WP what))
+               (S
+                  (NP
+                     (PRP they))
+                  (VP
+                     (VBP are)
+                     (VP
+                        (VBG covering)
+                        (PP
+                           (IN with)
+                           (NP
+                              (DT that)
+                              (NN story)))))))))
+      (ENDS .)))
+[PCFGParser]	log prob = -40,50	sentence : Arthur suggested that the castle be carried .
+[PCFGParser]	best parse tree: 
+(START
+   (ROOT
+      (S
+         (NP
+            (NNP Arthur))
+         (VP
+            (VBD suggested)
+            (SBAR
+               (WHNP
+                  (WDT that))
+               (S
+                  (NP
+                     (DT the)
+                     (NN castle))
+                  (VP
+                     (VB be)
+                     (VP
+                        (VBN carried)))))))
+      (ENDS .)))
+[PCFGParser]	log prob = -53,57	sentence : the king drank to the castle that was his home .
+[PCFGParser]	best parse tree: 
+(START
+   (ROOT
+      (S
+         (NP
+            (DT the)
+            (NN king))
+         (VP
+            (VBD drank)
+            (PP
+               (TO to)
+               (NP
+                  (NP
+                     (DT the)
+                     (NN castle))
+                  (SBAR
+                     (WHNP
+                        (WDT that))
+                     (S
+                        (VP
+                           (VBD was)
+                           (NP
+                              (PRPS his)
+                              (NN home)))))))))
+      (ENDS .)))
+[PCFGParser]	log prob = -36,98	sentence : when the king drinks , Patsy drinks .
+[PCFGParser]	best parse tree: 
+(START
+   (ROOT
+      (S
+         (@@SBAR-PCT-NP
+            (@SBAR-PCT
+               (SBAR
+                  (WHADVP
+                     (WRB when))
+                  (S
+                     (NP
+                        (DT the)
+                        (NN king))
+                     (VP
+                        (VBZ drinks))))
+               (PCT ,))
+            (NP
+               (NNP Patsy)))
+         (VP
+            (VBZ drinks)))
+      (ENDS .)))
+[PCFGParser]	cross-entropy=4,962 perplexity=3.116e+01

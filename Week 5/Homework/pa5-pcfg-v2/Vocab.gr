@@ -1,0 +1,315 @@
+#noun, proper, singular
+21	NNP	Arthur
+15	NNP	Camelot
+13	NNP	England
+13	NNP	Round Table
+16	NNP	Guinevere
+16	NNP	Patsy
+14	NNP	Sir Lancelot
+14	NNP	Zoot
+13	NNP	Holy Grail
+2	NNP	Sir Bedevere
+2	NNP	Dingo
+2	NNP	Uther Pendragon
+
+#verb, base form 
+13	VB	suggest
+13	VB	carry
+16	VB	have
+14	VB	be
+17	VB	speak
+14	VB	migrate
+13	VB	grow
+13	VB	do
+13	VB	ride
+2	VB	cover
+2	VB	drink
+13	VB	know
+
+#verbs (third person singular present)
+13	VPZ	is
+13	VPZ	rides
+2	VPZ	has
+2	VPZ	covers
+2	VPZ	drinks
+2	VPZ	carries
+
+#verb, present participle or gerund
+15	VBG	riding
+13	VBG	suggesting
+13	VBG	covering
+2	VBG	having
+2	VBG	speaking
+2	VBG	being
+2	VBG	drinking
+2	VBG	growing
+2	VBG	carrying
+2	VBG	migrating
+2	VBG	knowing
+
+#verb, present tense, 3rd person singular 
+14	VBZ	is
+15	VBZ	does
+13	VBZ	are
+16	VBZ	knows
+14	VBZ	drinks
+2	VBZ	speaks
+2	VBZ	grows
+2	VBZ	goes
+2	VBZ	migrates
+2	VBZ	suggests
+2	VBZ	knows
+
+#verb, present tense, not 3rd person singular 
+13	VBP	do
+14	VBP	are
+13	VBP	know
+2	VBP	have
+2	VBP	speak
+2	VBP	cover
+2	VBP	ride
+2	VBP	drink
+2	VBP	grow
+2	VBP	carry
+2	VBP	suggest
+2	VBP	migrate
+
+#verb, past participle 
+13	VBN	known
+13	VBN	covered
+14	VBN	been
+14	VBN	carried
+2	VBN	had
+2	VBN	spoken
+2	VBN	ridden
+2	VBN	drunk
+2	VBN	grown
+2	VBN	suggested
+2	VBN	migrated
+
+#verb, past tense
+14	VBD	was
+13	VBD	rode
+13	VBD	drank
+13	VBD	suggested
+2	VBD	had
+2	VBD	spoke
+2	VBD	covered
+2	VBD	were
+2	VBD	grew
+2	VBD	carried
+2	VBD	migrated
+2	VBD	knew
+
+#determiner
+22	DT	the
+16	DT	a
+13	DT	either
+13	DT	that
+2	DT	another
+2	DT	any
+2	DT	each
+2	DT	every
+2	DT	no
+2	DT	this
+
+#modal auxiliary 
+14	MD	might
+13	MD	should
+15	MD	will
+2	MD	can
+2	MD	could
+2	MD	may
+2	MD	must
+2	MD	ought
+2	MD	shall
+2	MD	would
+
+#noun, common, singular or mass
+17	NN	king
+13	NN	horse
+15	NN	castle
+13	NN	ride
+13	NN	fruit
+13	NN	swallow
+13	NN	chalice
+13	NN	servant
+13	NN	story
+13	NN	home
+2	NN	defeater
+2	NN	sovereign
+2	NN	corner
+2	NN	land
+2	NN	quest
+2	NN	master
+2	NN	sun
+2	NN	winter
+2	NN	coconut
+2	NN	pound
+2	NN	husk
+2	NN	weight
+
+#pronoun, personal 
+13	PRP	she
+17	PRP	they
+14	PRP	it
+13	PRP	he
+2	PRP	her
+2	PRP	him
+2	PRP	one
+2	PRP	them
+
+#pronoun, possessive 
+14	PRPS	his
+2	PRPS	her
+2	PRPS	its
+2	PRPS	their
+
+#noun, common, plural
+13	NNS	coconuts
+13	NNS	strangers
+13	NNS	nights
+13	NNS	inches
+2	NNS	halves
+2	NNS	snows
+2	NNS	mountains
+2	NNS	areas
+2	NNS	snakes
+2	NNS	ants
+2	NNS	Britons
+2	NNS	Saxons
+
+#punctuation
+16	PCT	,
+2	PCT	;
+2	PCT	...
+2	PCT	--
+2	PCT	:
+
+
+#preposition or conjunction, subordinating
+13	IN	near
+13	IN	at
+15	IN	with
+13	IN	of
+14	IN	by
+13	IN	from
+13	IN	because
+13	IN	for
+13	IN	that
+2	IN	than
+2	IN	above
+2	IN	across
+2	IN	below
+2	IN	into
+2	IN	on
+2	IN	over
+2	IN	through
+
+# Subordinating conjunctions.
+2	IN	so
+2	IN	while
+2	IN	if
+
+#"to" as preposition or infinitive marker
+16	TO	to
+
+#adjective or numeral, ordinal 
+13	JJ	yellow
+13	JJ	hard
+13	JJ	sixty
+13	JJ	tiny
+13	JJ	trusty
+2	JJ	bloodiest
+2	JJ	weariest
+2	JJ	trustiest
+2	JJ	hottest
+2	JJ	simplest
+2	JJ	tiniest
+2	JJ	hardest
+2	JJ	weary
+2	JJ	bloody
+2	JJ	unable
+2	JJ	further
+2	JJ	sacred
+2	JJ	tropical
+2	JJ	indigenous
+2	JJ	temperate
+2	JJ	hot
+2	JJ	lucky
+2	JJ	simple
+2	JJ	sensational
+2	JJ	comparable
+2	JJ	angolian
+2	JJ	yellow
+2	JJ	plodding
+
+#adjective, comparative 
+2	JJR	bloodier
+2	JJR	wearier
+2	JJR	trustier
+2	JJR	hotter
+2	JJR	simpler
+2	JJR	tinier
+2	JJR	harder
+
+#adverb
+13	RB	precisely
+13	RB	not
+13	RB	frequently
+2	RB	again
+2	RB	already
+2	RB	currently
+2	RB	south
+2	RB	successfully
+2	RB	unfortunately
+
+#adverb, superlative 
+2	RBS	most
+
+#WH-pronoun 
+13	WP	who
+14	WP	what
+
+#Wh-adverb
+13	WRB	why
+13	WRB	when
+2	WRB	how
+2	WRB	where
+
+# Possessive marker.
+2	POS	's
+
+#WH-determiner 
+14	WDT	that
+2	WDT	what
+2	WDT	which
+
+# Wh possessive pronoun.
+2	WPS	whose
+
+#numeral, cardinal
+13	CD	five
+13	CD	eight
+13	CD	one
+2	CD	sixty
+2	CD	5,000
+2	CD	5.5
+
+# Expletive.
+2	EX	there
+
+#Conjunction, coordinating
+13	CC	or
+13	CC	neither
+13	CC	nor
+14	CC	and
+2	CC	but
+2	CC	either
+2	CC	nor
+2	CC	so
+
+#End of sentence
+31	ENDS	.
+15	ENDS	?
+14	ENDS	!

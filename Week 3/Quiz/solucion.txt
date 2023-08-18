@@ -1,0 +1,92 @@
+0,0000058464		0,0000152152
+0,000009504		0,0000153468
+
+P(comedy) = 2/5
+p(action) = 3/5
+V = 7
+size(comedy) = 9
+size(action) = 11
+
+
+		comedy			action
+fast		(1+1)/(9+7)= 0,125	(2+1)/(11+7)= 0,1667
+
+couple		(2+1)/(9+7)= 0,1875	(0+1)/(11+7)= 0,0556
+
+shoot		(0+1)/(9+7)= 0,0625	(4+1)/(11+7)= 0,2778
+
+fly		(1+1)/(9+7)= 0,125	(1+1)/(11+7)= 0,1111
+
+fun		(3+1)/(9+7)= 0,25	(1+1)/(11+7)= 0,1111
+
+P(doc|comedy) = 2/5*0,125*0,1875*0,0625*0,125   = 0,0000732421875
+P(doc|action) = 3/5*0,1667*0,0556*0,2778*0,1111 = 0,00017163582510096
+
+ = 
+
+Polarity("special effects") = PMI("special effects" | "good") - PMI("special effects" | "bad")
+PMI("special effects", "good") = log2(hits("special effects" NEAR good)/(hits("special effects")hits(good))) = log2(36/(437*3124)) =  log2(2,6369994462301162916755787481285e-5) = -15.210743
+
+PMI("special effects", "bad") = log2(hits("special effects" NEAR bad)/(hits("special effects")hits(bad))) = log2(18/(437*1791)) = log2(2,2998286627646240355093545530858e-5) = -15.408114
+
+Polarity("special effects") = -15.210743 + 15.408114 = 0,197371
+Polarity("special effects" = log2((log2(hits("special effects" NEAR good)hits("bad"))/(log2(hits("special effects" NEAR bad)hits("good"))) = log2((36*1791)/(18*3124))=log2(1,1466069142125480153649167733675) =  0,19737088384398188385908244977509
+
+
+Normal Naive bayes
+P(pos) = 2/5 = 0.4
+p(neg) = 3/5 = 0.6
+V = 3
+size(pos) = 9
+size(neg) = 14
+
+	pos			neg
+good	(3+1)/(9+3)= 0.3333	(2+1)/(14+3)= 0.1765
+
+poor	(1+1)/(9+3)= 0.1667	(10+1)/(14+3)= 0.6471
+
+great	(5+1)/(9+3)= 0.5	(2+1)/(14+3)= 0.1765
+
+null	(0+1)/(9+3)= 0.0833	(0+1)/(14+3)= 0.0588
+
+dev data = "A good, good plot and great characters, but poor acting."
+
+P(doc|pos) = 0,4*0,0833*0,3333*0,3333*0,0833*0,0833*0,5*0,0833*0,0833*0,1667*0,0833 
+           = 1,2373889438547104191151660694e-9
+P(doc|neg) = 0,6*0,0588*0,1765*0,1765*0,0588*0,0588*0,1765*0,0588*0,0588*0,6471*0,0588
+           = 8,823090539601892994529309696e-11
+
+clasifica positivo.
+
+Binaria naive bayes
+	"good" 	"poor" 	"great" (class)
+d1. 	1 	0 	1 	pos
+d2. 	0 	1 	1 	pos
+d3. 	1 	1 	0 	neg
+d4. 	1 	1 	1 	neg
+d5. 	0 	1 	0 	neg
+
+P(pos) = 2/5 = 0.4
+p(neg) = 3/5 = 0.6
+V = 3
+size(pos) = 4
+size(neg) = 6
+
+	pos			neg
+good	(1+1)/(7)= 0,2857	(2+1)/(9)= 0,3333
+
+poor	(1+1)/(7)= 0,2857	(3+1)/(9)= 0,4444
+
+great	(2+1)/(7)= 0,4286	(1+1)/(9)= 0,2222
+
+null	(0+1)/(7)= 0,1429	(0+1)/(9)= 0,1111
+
+
+dev data = "A good, good plot and great characters, but poor acting."
+
+P(doc|pos) = 0,4*0,1429*0,2857*0,2857*0,1429*0,1429*0,4286*0,1429*0,1429*0,2857*0,1429
+	   = 3,4043660583037873291752559393638e-8
+P(doc|neg) = 0,6*0,1111*0,3333*0,3333*0,1111*0,1111*0,2222*0,1111*0,1111*0,4444*0,1111
+	   = 1,2377254935074176698757426694596e-8
+
+Clasifica positivo

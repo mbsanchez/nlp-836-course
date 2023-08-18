@@ -1,0 +1,68 @@
+﻿Question 1
+We surveyed cancer types from 569 patients in a cancer hospital and found the gender distribution of patients who have and don't have hodgkins lymphoma. What is the joint probability P(female, lymphoma) and conditional probability P(female|lymphoma)?
+
+
+	Lymphoma 	No Lymphoma
+Male 	59 		230
+Female 	10 		270
+
+p(lymphoma) = 69/569 = 0,12126537785588752196836555360281
+P(female, lymphoma) = 10/569 = 0,01757469244288224956063268892794
+p(female | lymphoma) = P(female, lymphoma) / P(lymphoma) = 0,018/0,121 = 0.145
+
+Question 2
+In the maxent model, we've learned that P(c|d,λ) = expΣλifi(c,d)/ΣexpΣλifi(c',d). This equation is also in the lecture slide #25. Given the 3 classes and the 3 features, compute the following probabilities. wi = "Goéric"
+
+    P(PERSON | by Goéric) =
+    P(LOCATION | by Goéric) =
+    P(DRUG | by Goéric) =
+
+
+Weight 	Feature
+ 1.5 	f1(c, d) = [c = LOCATION & wi-1 = in & isCapitalized(wi)]
+-0.5 	f2(c, d) = [c = LOCATION & hasAccentedLatinChar(wi)]
+ 0.7 	f3(c, d) = [c = DRUG & ends(wi, c)]
+
+				PERSON|by Goéric	PERSON|by Goéric	PERSON|by Goéric
+exp(sum(lambdai.fi(c,d))	exp(0) = 1		e(-0.5)			e(0.7)  
+	
+sum(exp(lambdai.fi(c',d) = exp(1.5) = 3,6202833671831099452283489235742
+
+    P(PERSON | by Goéric) = 1/3,6202833671831099452283489235742		= 0,276
+    P(LOCATION | by Goéric) =e(-0.5)/3,6202833671831099452283489235742	= 0,168
+    P(DRUG | by Goéric) = e(0.7)/3,6202833671831099452283489235742	= 0,556
+
+Question 3
+We have defined three classes {PERSON, LOCATION, other} and five features like the following. We have also hand-labeled a sentence to train a NER classifier. Each word is labeled in the format of {word}/{class} (e.g. Obama/PER). Compute the sum of the empirical expectations of all features for the following sentence. The empirical expectation of a feature is Σ(c,d)∈observed(C,D)fi(c,d)
+
+President/O Obama/PER met/O with/O former/O President/O George/PER H.W./PER Bush/PER and/O former/O Florida/LOC Gov./O Jeb/PER Bush/PER in/O the/O Oval/LOC Office/LOC on/O Friday,/O joining/O in/O a/O bipartisan/O gathering/O in/O an/O election/O year./O
+
+Features
+f1(c, d) = [c = LOCATION & isCapitalized(wi)] 		= 3 
+f2(c, d) = [c = LOCATION & classOf(wi-1) = LOCATION] 	= 1
+f3(c, d) = [c = PERSON & wi-1 = "Gov."] 		= 1
+f4(c, d) = [c = PERSON & wi-1 = "President"] 		= 2
+f5(c, d) = [c = PERSON & isCapitalized(wi) ]		= 6
+Sum = 13
+
+Question 4
+We've built an NER system and ran it on a tiny dataset. Based on the following result, compute the F1 score of the system. (round to the 3 decimal places, e.g. 0.123)
+
+			GOLD PERSON 	GOLD other	Retrieved	Not Retrieved
+SYSTEM GUESS PERSON 	20 		10		TP		FP
+SYSTEM GUESS other 	11 		14		FN		TN
+
+Ecuaciones
+P = # of correctly extracted relations / Total # of extracted relations = TP /(TP+FN)
+R = # of correctly extracted relations / Total # of true gold relations = TP /(TP+FP)
+F1 = 2PR / (P + R)
+
+P = 20 / 31 = 0,64516129032258064516129032258065
+R = 20 / 30  = 0,66666666666666666666666666666667
+
+F1 = 0.656
+
+Question 5
+Suppose we build a maxent classifier over 5 classes {PERSON, ORGANIZATION, LOCATION, PRODUCT, OTHER}. Suppose further that for a particular data item, one feature matches for the class PERSON with its lambda weight as ln⁡(4). No other features match that particular data item for any other class. What will be the probability of the class PERSON on this data item at classification time? (numerical response rounded to the nearest tenths, e.g. 0.1 or 0.9)
+
+P = 4 / (4+1+1+1+1) = 4 / 8 = 1/2 = 0.5

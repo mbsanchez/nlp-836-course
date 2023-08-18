@@ -1,0 +1,2 @@
+Knowing a word's part of speech can help in many NLP tasks.
+The air conditioning pouring out from the shops beckoned the passers-by to stay a while and cool off.

@@ -1,0 +1,10 @@
+nlpclass.assignments.PCFGParserTester$UnaryRule
+nlpclass.assignments.PCFGParserTester$Grammar
+nlpclass.assignments.PCFGParserTester
+nlpclass.assignments.PCFGParserTester$Parser
+nlpclass.assignments.PCFGParserTester$PCFGParser
+nlpclass.assignments.PCFGParserTester$Lexicon
+nlpclass.assignments.PCFGParserTester$BaselineParser
+nlpclass.assignments.PCFGParserTester$BinaryRule
+nlpclass.assignments.PCFGParserTester$TreeAnnotations
+nlpclass.assignments.PCFGParserTester$TreeAnnotations$1

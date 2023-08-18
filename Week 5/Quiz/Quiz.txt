@@ -1,0 +1,101 @@
+﻿Question 1
+Suppose we build a maxent model for part of speech tagging a word (x), over a set of just 3 parts of speech (y): Noun, Verb, and Other. Our model has just one feature:
+
+f(x,y) = [x="breeze" & y="Noun"]   #Solo 1 feature para uno de los tag, 2/3 de tag no tienen features por tanto su lambda será 0.
+
+Our training data consists of 5 observations:
+
+[x="breeze" & y="Verb"]
+[x="breeze" & y="Verb"]
+[x="breeze" & y="Verb"]
+[x="breeze" & y="Noun"]
+[x="breeze" & y="Noun"]
+
+
+The maxent model will be trained in the usual way to give the feature f a weight λ, so that the model expectation for the feature matches its empirical expectation.
+
+The weight of the feature will be log⁡X (natural log).
+
+What is X?
+
+lambda = ln(X) => X = exp(lambda)
+
+exp(lambda)/(exp(lambda)+exp(lambda2)+exp(lambda3)) = Prob(Noun|brezee)
+Como 2/3 tag no tienen features entonces tenemos:
+exp(lambda)/(exp(lambda)+2)=2/5 => 5exp(lambda) = 2exp(lambda)+4
+5exp(lambda)-2exp(lambda) = 4 => 3 exp(lambda) = 4 => exp(lambda) = 4/3 => X= 4/3
+
+Question 2
+Suppose we build a maxent model for part of speech tagging a word (x), over a set of just 3 parts of speech (y): Noun, Verb, and Other. Our model has just one feature:
+
+f(x,y) = [x="make" & y="Verb"]
+
+Our training data consists of 5 observations:
+
+[x="make" & y="Verb"]
+[x="make" & y="Verb"]
+[x="make" & y="Verb"]
+[x="make" & y="Verb"]
+[x="make" & y="Noun"]
+
+
+The maxent model will be trained in the usual way to give the feature f a weight λ, so that the model expectation for the feature matches its empirical expectation.
+
+What probability will the model give to P(Noun|make)?
+
+Empirical
+	Noun	verb	Other
+make	1	4	0
+
+Model
+	Noun	Verb	Other
+make	1/3	1/3	1/3
+
+Verb = 4/5
+Model
+	Noun	Verb	Other
+make	1/10	4/5	1/10
+
+
+Question 3
+Suppose we build a maxent model for part of speech tagging a word (x), over a set of just 3 parts of speech (y): Noun, Verb, and Other. Our model has just one feature:
+
+f(x,y) = [x="breeze" & y="Noun"]
+
+Our training data consists of 5 observations:
+
+[x="breeze" & y="Verb"]
+[x="breeze" & y="Verb"]
+[x="breeze" & y="Verb"]
+[x="breeze" & y="Noun"]
+[x="breeze" & y="Noun"]
+
+
+The maxent model will be trained in the usual way to give the feature f a weight λ, so that the model expectation for the feature matches its empirical expectation. Suppose we now put gaussian regularization into the same model over the same data with σ=1.
+
+The optimal weight of the feature will still be of the form log⁡X (natural log). What is X?
+
+∂logP(C,λ|D)/∂λi=actual(fi,C)−predicted(fi,λ)−λi/σ2
+
+Optimas is when ∂logP(C,λ|D)/∂λi is Zero. Then
+
+actual(fi,C)−predicted(fi,λ)−λi/σ2 = 0
+
+actual(fi,C)= 2    #we can find feature f two times in our data 
+predicted(fi,λ)=5exp(λ)/(exp(λ)+2)   #it is the number of data items, and the rest is simply 
+
+2 - 5exp(λ)/(exp(λ)+2) -1 = 0 => 5exp(λ) = (exp(λ)+2) => 4exp(λ) = 2 => exp(λ) = 1/2
+
+X = 1/2
+
+Question 4
+Do the part-of-speech tagging by hand for the following sentence using Penn Treebank POS tags:
+
+Knowing/? a/? word/? 's/? part/? of/? speech/? can/? help/? in/? many/? NLP/? tasks/? ./?
+Knowing/VBG a/DT word/NN 's/POS part/NN of/IN speech/NN can/VB help/VB in/IN many/CD NLP/NNP tasks/NNS ./.
+Knowing/VBG a/DT word/NNS 's/NNS part/NN of/IN speech/NN can/MD help/VB in/IN many/JJ NLP/NNP tasks/NNS ./.
+Knowing/VBG a/DT word/NN 's/POS part/NN of/IN speech/NN can/MD help/VB in/IN many/JJ NLP/NNP tasks/NNS ./.
+Knowing/VB a/DT word/NN 's/POS part/NN of/IN speech/NN can/MD help/VB in/IN many/CD NLP/NNP tasks/NNS ./.
+
+Opción 3
+

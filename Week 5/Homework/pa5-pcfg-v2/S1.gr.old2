@@ -1,0 +1,90 @@
+# The start symbol is START.
+
+# These two rules are required; choose their weights carefully!
+99	START	S1
+1	START	S2
+
+# This is a very, very, very simple grammar to get you started.
+
+1	S1	NP VP EndS
+1	S1	VP EndS
+5	S1	Aux	NP VP EndS
+1	S1	Wh NP VP EndS
+20	S1	Wh Aux NP VP EndS
+5	S1	Auxb NP VP EndS
+
+1	VP	VerbT 
+1	VP	VerbT NP
+1	VP	VerbT NP PP
+1	VP	VerbT PP
+
+20	NP	Det Nbar
+1	NP	Det Card Ord Quant AP Nbar
+1	NP	Card Ord Quant AP Nbar
+1	NP	Det Ord Quant AP Nbar
+1	NP	Det Card Quant AP Nbar
+1	NP	Det Card Ord AP Nbar
+1	NP	Det Card Ord Quant Nbar
+1	NP	Ord Quant AP Nbar
+1	NP	Card Quant AP Nbar
+1	NP	Card Ord AP Nbar
+1	NP	Card Ord Quant Nbar
+1	NP	Det Quant AP Nbar
+1	NP	Det Ord AP Nbar
+1	NP	Det Ord Quant Nbar
+1	NP	Det Card AP Nbar
+1	NP	Det Card Quant Nbar
+1	NP	Det Card Ord Nbar
+1	NP	Quant AP Nbar
+1	NP	Ord AP Nbar
+1	NP	Ord Quant Nbar
+1	NP	Card AP Nbar
+1	NP	Card Quant Nbar
+1	NP	Card Ord Nbar
+1	NP	Det AP Nbar
+1	NP	Det Quant Nbar
+1	NP	Det Ord Nbar
+1	NP	Det Card Nbar
+1	NP	AP Nbar
+1	NP	Quant Nbar
+1	NP	Card Nbar
+1	NP	Ord Nbar
+1	NP	Nbar
+1	NP	Pnoun
+1	NP	Pnoun Nbar
+1	NP	Proper
+1	NP	AP
+
+20	Nbar	Noun
+1	Nbar	Noun Nbar
+1	Nbar	Nbar VerbGP
+1	Nbar	VerbGP
+1	Nbar	Nbar VerbEdP
+1	Nbar	VerbEdP
+1	Nbar	Nbar PP
+1	Nbar	Nbar VP
+1	Nbar	VP
+
+1	VerbGP	VerbG
+1	VerbGP	VerbG NP
+1	VerbGP	VerbG PP
+1	VerbGP	VerbG NP PP	
+
+1	VerbEdP	VerbEd
+1	VerbEdP	VerbEd NP
+1	VerbEdP	VerbEd PP
+1	VerbEdP	VerbEd NP PP	
+
+1	PP	Prep NP
+1	PP	Auxb Prep NP
+
+#Noun			Noun
+#Verb			VerbT
+#Adjetive		AP		--
+#Pronoun		Pnoun	--
+#Propper-Noun	Proper
+#Determiner		Det
+#Preposition	Prep
+#Conjunction	Conj	--
+
+#Nominal		Nbar
